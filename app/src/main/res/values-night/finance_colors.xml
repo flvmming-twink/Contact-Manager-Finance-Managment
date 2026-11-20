@@ -1,0 +1,18 @@
+<resources>
+    <color name="finance_primary">#71D49F</color>
+    <color name="finance_on_primary">#003921</color>
+    <color name="finance_primary_container">#075D39</color>
+    <color name="finance_on_primary_container">#A5F2C5</color>
+    <color name="finance_secondary">#B9C5D2</color>
+    <color name="finance_background">#17130F</color>
+    <color name="finance_surface">#201B16</color>
+    <color name="finance_surface_variant">#2D2721</color>
+    <color name="finance_on_surface">#F0E8DF</color>
+    <color name="finance_on_surface_variant">#CEC4BA</color>
+    <color name="finance_outline">#999088</color>
+    <color name="finance_expense">#FFB4AE</color>
+    <color name="finance_expense_container">#6F1D1C</color>
+    <color name="finance_warning">#F5C76D</color>
+    <color name="finance_warning_container">#5B4212</color>
+    <color name="finance_divider">#443D36</color>
+</resources>

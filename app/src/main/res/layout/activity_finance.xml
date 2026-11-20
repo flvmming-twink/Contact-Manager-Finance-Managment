@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/financeRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/finance_background"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/financeToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?attr/actionBarSize"
+            android:background="@color/finance_background"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            app:menu="@menu/menu_finance_top"
+            app:subtitleTextColor="@color/finance_on_surface_variant"
+            app:titleTextColor="@color/finance_on_surface" />
+
+        <FrameLayout
+            android:id="@+id/financeContent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/financeBottomNavigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/finance_surface"
+            app:itemIconTint="@color/finance_nav_item"
+            app:itemTextColor="@color/finance_nav_item"
+            app:labelVisibilityMode="labeled"
+            app:menu="@menu/menu_finance_bottom" />
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/financeFab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="92dp"
+        android:contentDescription="@string/finance_add_transaction"
+        app:backgroundTint="@color/finance_primary"
+        app:srcCompat="@drawable/ic_finance_add"
+        app:tint="@color/finance_on_primary" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

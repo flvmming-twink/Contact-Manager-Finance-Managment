@@ -1,0 +1,6 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/nav_overview" android:icon="@drawable/ic_finance_home" android:title="@string/finance_nav_overview" />
+    <item android:id="@+id/nav_transactions" android:icon="@drawable/ic_finance_transactions" android:title="@string/finance_nav_transactions" />
+    <item android:id="@+id/nav_budgets" android:icon="@drawable/ic_finance_budget" android:title="@string/finance_nav_budgets" />
+    <item android:id="@+id/nav_categories" android:icon="@drawable/ic_finance_categories" android:title="@string/finance_nav_categories" />
+</menu>

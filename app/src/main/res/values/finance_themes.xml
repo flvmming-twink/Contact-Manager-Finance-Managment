@@ -1,0 +1,18 @@
+<resources>
+    <style name="Theme.FinanceManager" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/finance_primary</item>
+        <item name="colorOnPrimary">@color/finance_on_primary</item>
+        <item name="colorPrimaryContainer">@color/finance_primary_container</item>
+        <item name="colorOnPrimaryContainer">@color/finance_on_primary_container</item>
+        <item name="colorSecondary">@color/finance_secondary</item>
+        <item name="colorSurface">@color/finance_surface</item>
+        <item name="colorOnSurface">@color/finance_on_surface</item>
+        <item name="colorSurfaceVariant">@color/finance_surface_variant</item>
+        <item name="colorOnSurfaceVariant">@color/finance_on_surface_variant</item>
+        <item name="colorOutline">@color/finance_outline</item>
+        <item name="android:windowBackground">@color/finance_background</item>
+        <item name="android:navigationBarColor">@color/finance_surface</item>
+        <item name="android:statusBarColor">@color/finance_background</item>
+        <item name="android:fontFamily">sans</item>
+    </style>
+</resources>

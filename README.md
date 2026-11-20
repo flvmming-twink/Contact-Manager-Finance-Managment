@@ -1,43 +1,42 @@
-﻿# Contact Manager
+# Finance Manager
 
-Native Android app (Kotlin, Android 5.0+).
+Локальное Android-приложение для домашнего учёта доходов, расходов и месячных бюджетов. Версия **1.01** создана на основе истории Contact Manager и требований курсового проекта.
 
-## Current version
-`Contact Manager v0.12.2a (TEST)`
+## Возможности версии 1.01
 
-## Release state
-- `v0.12.1` published as release
-- `v0.12.2` published as pre-release
-- `v0.12.2a` is current stabilization test build
+- операции дохода и расхода с датой, категорией и комментарием;
+- редактирование и удаление операций;
+- пользовательские категории с типом и цветом;
+- месячные лимиты расходов и предупреждения о приближении к лимиту;
+- обзор месяца: доходы, расходы, баланс, круговая диаграмма и динамика баланса;
+- фильтры операций по типу и категории;
+- экспорт всех операций в CSV через системный выбор места сохранения;
+- полностью локальное хранение в SQLite без регистрации, облака и доступа к контактам.
 
-## v0.12.2a focus
-- startup crash investigation and stabilization,
-- safer UI inflation path for header icon and contact cards,
-- persistent event/crash logging to text files on device.
+## Установка
 
-## On-device logs
-Each launch creates a log file in:
-`Android/data/com.example.contactmanagerdemo/files/Documents/ContactManagerLogs/`
+Готовый отладочный установщик находится в [`apps/FinanceManager-v1.01-debug.apk`](apps/FinanceManager-v1.01-debug.apk). Для установки APK из файла на Android может потребоваться разрешить установку из выбранного источника.
 
-## APK
-- `artifacts/ContactManager-v0.12.2a-debug.apk`
-- `versions/Contact Manager v0.12.2a/ContactManager-v0.12.2a-debug.apk`
+Минимальная версия Android — 5.0 (API 21), целевая — Android 14 (API 34).
 
-## Versions
-- `versions/DEMO-v0` - released DEMO version (with APK)
-- `versions/Contact Manager v0.11` - archived (no APK)
-- `versions/Contact Manager v0.11.2` - stabilization release
-- `versions/Contact Manager v0.11.3` - description only
-- `versions/Contact Manager v0.11.5a` - description only
-- `versions/Contact Manager v0.11.5b` - minimal rewrite
-- `versions/Contact Manager v0.11.5c` - encoding fix
-- `versions/Contact Manager v0.11.6a` - Russian UI, stats, search
-- `versions/Contact Manager v0.11.6b` - stable redesign + extended form
-- `versions/Contact Manager v0.12.1` - release
-- `versions/Contact Manager v0.12.2` - pre-release
-- `versions/Contact Manager v0.12.2a` - test stabilization build
+## Разработка
 
-## Descriptions
-- `docs`
-- `descriptions/ФРОНТЭНД`
-- `descriptions/БЭКЭНД`
+```powershell
+.\gradlew.bat :app:assembleDebug :app:testDebugUnitTest
+```
+
+Перед локальной сборкой укажите `sdk.dir` в `local.properties`. Результат Gradle появляется в `app/build/outputs/apk/debug/app-debug.apk`.
+
+## Данные и приватность
+
+База создаётся во внутреннем хранилище приложения и недоступна другим приложениям без системных привилегий. Finance Manager 1.01 не запрашивает доступ к интернету, контактам, камере или уведомлениям. Удаление приложения удаляет локальные данные, поэтому для переноса истории используйте экспорт CSV.
+
+## Структура
+
+- `app/src/main/java/.../finance/data` — модели и SQLite;
+- `app/src/main/java/.../finance/ui` — экраны, списки и графики;
+- `app/src/main/java/.../finance/util` — форматирование и проверка сумм;
+- `apps` — установщики приложения;
+- `PRODUCT.md` и `DESIGN.md` — продуктовые и визуальные решения версии 1.01.
+
+Архивный код Contact Manager сохранён в истории и исходниках репозитория, но точкой запуска является Finance Manager.

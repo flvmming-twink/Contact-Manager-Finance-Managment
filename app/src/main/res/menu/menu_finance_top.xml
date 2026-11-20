@@ -1,0 +1,3 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/action_export_csv" android:icon="@drawable/ic_finance_export" android:title="@string/finance_export_csv" app:showAsAction="ifRoom" />
+</menu>
